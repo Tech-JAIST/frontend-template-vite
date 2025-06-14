@@ -46,29 +46,15 @@ pnpm dev
 .github/                  # GitHub Actions の設定
 src/                      # ソースコードディレクトリ
   ├ components/           # 再利用可能なコンポーネント
-  │  ├ Layout.tsx         # 共通レイアウト（ヘッダー、ナビゲーション）
-  │  ├ lib/               # コンポーネント用ユーティリティ
-  │  │  └ utils.ts        # shadcn/ui用のユーティリティ関数
   │  └ ui/                # shadcn/uiコンポーネント
-  │     ├ button.tsx      # ボタンコンポーネント
-  │     ├ card.tsx        # カードコンポーネント
-  │     ├ navigation-menu.tsx # ナビゲーションメニュー
-  │     └ sheet.tsx       # モバイルメニュー用シート
   ├ lib/                  # 共通ユーティリティ
-  │  └ utils.ts           # 汎用ユーティリティ関数
+  │  └ utils.ts           # shadcn/ui用のユーティリティ関数
   ├ pages/                # ページコンポーネント
-  │  ├ HomePage.tsx       # ホームページ
-  │  ├ PingPage.tsx       # APIヘルスチェックページ
-  │  └ UsersPage.tsx      # ユーザー一覧ページ
   ├ routes/               # ルーティング設定
   │  └ index.tsx          # ルート定義とマッピング
   ├ services/             # API通信レイヤー
   │  ├ api.ts             # Axiosインスタンス設定
-  │  ├ pingService.ts     # Ping API関連の処理
-  │  └ userService.ts     # ユーザーAPI関連の処理
   ├ stores/               # 状態管理（Zustand）
-  │  ├ pingStore.ts       # Ping状態の管理
-  │  └ userStore.ts       # ユーザー状態の管理
   ├ styles/               # スタイルシート
   │  └ global.css         # グローバルCSS（Tailwind設定含む）
   ├ App.tsx               # アプリケーションのルートコンポーネント
@@ -154,5 +140,10 @@ VITE_API_URL=https://api.example.com/v1
 ### コンポーネントの追加
 
 - UIコンポーネントは `src/components/ui/` に配置
-  - shadcn/uiが提供するコンポーネントは `pnpm dlx shadcn@latest add コンポーネント名` により追加できる
 - ページ固有のコンポーネントは各ページファイル内に定義するか、`src/components/` に配置
+
+#### shadcn/uiが提供するコンポーネントの追加方法
+
+`pnpm dlx shadcn@latest add コンポーネント名` により追加できる
+
+参考：[コンポーネント一覧](https://ui.shadcn.com/docs/components)
