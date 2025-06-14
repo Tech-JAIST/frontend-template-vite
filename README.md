@@ -154,4 +154,5 @@ VITE_API_URL=https://api.example.com/v1
 ### コンポーネントの追加
 
 - UIコンポーネントは `src/components/ui/` に配置
+  - shadcn/uiが提供するコンポーネントは `pnpm dlx shadcn@latest add コンポーネント名` により追加できる
 - ページ固有のコンポーネントは各ページファイル内に定義するか、`src/components/` に配置
