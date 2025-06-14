@@ -10,6 +10,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",
+		"test": "vitest run --passWithNoTests",
 		"lint": "biome check .",
 		"preview": "vite preview",
 		"prepare": "lefthook install"
@@ -18,6 +19,7 @@
 		"@radix-ui/react-dialog": "^1.1.14",
 		"@radix-ui/react-navigation-menu": "^1.2.13",
 		"@radix-ui/react-slot": "^1.2.3",
+		"@radix-ui/react-tabs": "^1.1.12",
 		"axios": "^1.9.0",
 		"biome": "^0.3.3",
 		"class-variance-authority": "^0.7.0",
@@ -41,6 +43,7 @@
 		"@types/react-dom": "^19.1.2",
 		"@vitejs/plugin-react": "^4.4.1",
 		"autoprefixer": "^10.4.21",
+		"jsdom": "^26.1.0",
 		"lefthook": "^1.11.12",
 		"postcss": "^8.5.3",
 		"tailwindcss": "^4",
